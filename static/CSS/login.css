@@ -1,0 +1,96 @@
+/* 博客登录页面专用样式 */
+/* 设置版心 */
+.login-container {
+    /* 设置宽度 */
+    width: 100%;
+    /* 设置成浏览器窗口一样高再减去导航栏部分 */
+    height: calc(100% - 50px);
+
+    /* 为了让子元素login-dialog能实现垂直居中 */
+    /* 用flex开启弹性布局 */
+    display: flex;
+    /* 实现子元素垂直居中 */
+    align-items: center;
+    /* 实现子元素水平居中*/
+    justify-content: center;
+    /* padding-top: 30px; */
+}
+
+/* 设置对话框 */
+.login-dialog {
+    width: 400px;
+    height: 350px;
+    /* 背景颜色 */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+/* 设置标题样式 */
+.login-dialog h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px 0 40px 0;
+}
+
+/* 设置row包裹的元素部分 */
+.login-dialog .row {
+    height: 50px;
+    width: 100%;
+    /* 开启弹性布局 */
+    display: flex;
+    /* 子元素垂直居中 */
+    align-items: center;
+    /* 子元素水平居中 */
+    justify-content: center;
+    padding: 0px 10x 40px 10px;
+}
+
+/* 设置span标签的内容 */
+.login-dialog .row span {
+    /* span转块级元素,方便设置尺寸 */
+    display: block;
+    width: 100px;
+    font-weight: 700;
+    /* 左内边距让用户名和密码有右边靠一点 */
+    padding-left: 30px;
+}
+
+/* 设置输入框 */
+#username,
+#password {
+    width: 220px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    /* 输出文字时左侧不紧贴边框 */
+    padding-left: 10px;
+    padding-right: 10px;
+    /* 去边框 */
+    border: none;
+    /* 去输入时的轮廓线 */
+    outline: none;
+    /* 让设置边框变成圆角 */
+    border-radius: 10px;
+    /* 右外边距让输入框往左边靠一点 */
+    margin-right: 30px;
+}
+
+/* 设置登录按键 */
+.row button {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(0, 128, 0);
+    /* 去掉默认边框 */
+    border: none;
+    margin-top: 20px;
+    /* 设置文字垂直居中 */
+    line-height: 50px;
+}
+
+/* 伪类选择器 - 鼠标按下的效果 */
+.row button:active {
+    background-color: #666;
+}
